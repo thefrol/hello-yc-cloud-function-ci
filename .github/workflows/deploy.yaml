@@ -33,6 +33,9 @@ jobs:
           environment: | 
             DEBUG=True
             COUNT=1
+          exclude: |
+            .git
+            .github
           # include: 
           #   - *
           #   ./src
