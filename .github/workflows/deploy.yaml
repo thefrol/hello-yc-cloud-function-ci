@@ -33,7 +33,8 @@ jobs:
           environment: | 
             DEBUG=True
             COUNT=1
-          include: *
+          # include: 
+          #   - *
           #   ./src
           #   package.json
           # exclude: | 
