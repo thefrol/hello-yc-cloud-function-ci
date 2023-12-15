@@ -14,10 +14,10 @@ jobs:
     environment: prod
     steps:
       - name: echo prod
-        run: echo ${{ env.env_caption}}
+        run: echo ${{ vars.env_caption}}
   dev_echo:
     runs-on: ubuntu-latest
     environment: dev
     steps:
       - name: echo dev
-        run: echo ${{ env.env_caption}}
+        run: echo ${{ vars.env_caption}}
