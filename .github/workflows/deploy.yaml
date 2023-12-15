@@ -8,7 +8,7 @@ vars:
 
 jobs:
   echoing:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       run: echo {{ vars.var1}}
   deploy: # make sure build/ci work properly
