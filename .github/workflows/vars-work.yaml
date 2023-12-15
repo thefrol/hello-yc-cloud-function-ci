@@ -1,0 +1,23 @@
+name: 'vars-echoing'
+on:
+  push:
+
+jobs:
+  echoing:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: echo repovars
+        run: echo ${{ vars.var1 }}
+  prod_echo:
+    runs-on: ubuntu-latest
+    environment: prod
+    steps:
+      - name: echo prod
+        run: echo ${{ env.env_caption}}
+  dev_echo:
+    runs-on: ubuntu-latest
+    environment: dev
+    steps:
+      - name: echo dev
+        run: echo ${{ env.env_caption}}
