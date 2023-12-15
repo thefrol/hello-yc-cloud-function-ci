@@ -14,11 +14,11 @@ jobs:
         id: sls-func
         uses: yc-actions/yc-sls-function@v2
         with:
-          yc-sa-json-credentials: ${{ secrets.YC_SA_JSON_CREDENTIALS }}
+          yc-sa-json-credentials: ${{ secrets.SA_KEY }}
           # bucket: ${{ secrets.BUCKET }}
           folder-id: ${{ secrets.FOLDER_ID }}
-          function-name: 'test-function'
-          runtime: 'nodejs16'
+          function-name: 'test-function-actions'
+          runtime: 'golang121'
           memory: '256Mb'
           entrypoint: './cmd/function/main.Handler'
           environment: | 
@@ -29,6 +29,6 @@ jobs:
           #   package.json
           # exclude: | 
           #   **/*.ts
-          tags: |
-            ${{ GITHUB_SHA::6 }}
-            foo
+          # tags: |
+          #   ${{ GITHUB_SHA::6 }}
+          #   foo
