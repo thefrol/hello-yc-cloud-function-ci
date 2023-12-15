@@ -6,7 +6,14 @@ on: # rebuild any PRs and main branch changes
       - main
       - 'releases/*'
 
+vars:
+  var1: abc
+
 jobs:
+  echoing:
+    run-on: ubuntu-latest
+    steps:
+      run: echo {{ vars.var1}}
   deploy: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
