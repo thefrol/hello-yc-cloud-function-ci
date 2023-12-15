@@ -2,9 +2,6 @@ name: 'deploy-prod'
 on: # rebuild any PRs and main branch changes
   pull_request:
   push:
-    branches:
-      - main
-      - 'releases/*'
 
 vars:
   var1: abc
