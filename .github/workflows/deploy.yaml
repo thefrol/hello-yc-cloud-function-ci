@@ -10,16 +10,9 @@ jobs:
   deploy: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
-      - name: List all files
-        run: ls -la
-      - name: Checkout
+      - name: Скачать репозиторий
         uses: actions/checkout@v3
-
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: List all files
-        run: ls -la
-      - name: Deploy Function
+      - name: Развернуть в облаке
         id: sls-func
         uses: yc-actions/yc-sls-function@v2
         with:
