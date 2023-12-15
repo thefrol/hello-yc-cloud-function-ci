@@ -10,6 +10,11 @@ jobs:
   deploy: # make sure build/ci work properly
     runs-on: ubuntu-latest
     steps:
+      - name: List all files
+        run: ls -la
+      - name: Checkout
+        uses: actions/checkout@v3
+
       - name: Run a one-line script
         run: echo Hello, world!
       - name: List all files
